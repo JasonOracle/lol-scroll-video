@@ -64,8 +64,9 @@ python -m http.server 8765
 ```
 
 > Serve over HTTP (opening `index.html` directly breaks cross-origin video loading).
-> The background track is **not included** for copyright reasons — drop your own loop
-> at `assets/bgm.mp3` (14–30 s, pre-lowered to BGM level) and it loops gaplessly.
+> The background track (`assets/bgm.mp3`, an 18–32 s slice) is used as a demo — **all
+> rights belong to its original owner**; swap in your own file to replace it, the page
+> loops it gaplessly.
 
 ## Make it yours
 

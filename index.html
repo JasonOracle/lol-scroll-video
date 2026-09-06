@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>海克斯大乱斗 — 英雄招牌动作 · 定格滚动世界</title>
+  <meta name="description" content="滚动鼠标,俯冲进海克斯微缩世界:从双城之门到峡谷大桥,英雄招牌动作逐格展开。" />
+  <style>
+    /* Theme the engine here. These match your generated scenes' background + palette. */
+    :root, .sw-root {
+      --sw-bg: #14234F;          /* == the scene background colour */
+      --sw-ink: #F0E6D2;
+      --sw-ink-soft: #8FA3BF;
+      --sw-accent: #0AC8B9;      /* per-section accents override this at runtime */
+      --sw-font-display: 'ZCOOL QingKe HuangYou', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+      --sw-font-body: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+    }
+    /* Dark-theme chrome overrides — the engine's pills/buttons assume a light page
+       (white 55% nav pill, ink-colored CTA bg, white 85% route label). Unlayered
+       page CSS wins over the engine's @layer sw tokens. Each rule carries a plain
+       rgba fallback first so pre-color-mix browsers keep readable chrome. */
+    .sw-nav{ background: rgba(10,20,40,.72);
+             background: color-mix(in srgb, #0A1428 72%, transparent);
+             border-color: rgba(10,200,185,.32);
+             border-color: color-mix(in srgb, #0AC8B9 32%, transparent); }
+    .sw-nav__item{ color: #B9C7DE; }
+    .sw-nav__item:hover{ color: #F0E6D2; }
+    .sw-nav__item.is-active{ color: #0A1428; background: var(--sw-accent); font-weight: 700; }
+    .sw-topcta{ color: #0A1428; background: linear-gradient(160deg, #F0E6D2, #C8AA6E);
+                box-shadow: 0 6px 18px rgba(0,0,0,.38); }
+    .sw-topcta:hover{ transform: translateY(-1px); }
+    .sw-btn--primary{ color: #0A1428; background: linear-gradient(160deg, #F0E6D2, #C8AA6E); }
+    .sw-btn--ghost{ color: #F0E6D2; border-color: rgba(240,230,210,.4);
+                    border-color: color-mix(in srgb, #F0E6D2 40%, transparent); }
+    .sw-route__label{ color: #F0E6D2; background: rgba(10,20,40,.88);
+                      background: color-mix(in srgb, #0A1428 88%, transparent);
+                      border-color: rgba(10,200,185,.34);
+                      border-color: color-mix(in srgb, #0AC8B9 34%, transparent);
+                      box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div id="world"></div>
+
+  <script src="scrub-engine.js?v=4"></script>
+  <script src="hextech-bgm.js?v=4" defer></script>
+  <script>
+    mountScrollWorld(document.getElementById('world'), {
+      brand: { name: '海克斯大乱斗 · HEXTECH MAYHEM', href: '#top' },
+      cta: { label: '召唤你的英雄', href: '#top' },
+      hint: '滚动 · 俯冲进入海克斯世界',
+      diveScroll: 1.3,
+      connScroll: 0.9,
+      sections: [
+        {
+          id: 'hexgate', label: '双城之门',
+          still: 'assets/hexgate.webp',
+          clip: 'assets/vid/hexgate.mp4',
+          accent: '#0AC8B9',
+          scroll: 1.7, linger: 0.45,
+          eyebrow: '双城序章',
+          title: '海克斯之门,轰然开启',
+          body: '一颗悬浮的水晶,把两座城的故事缝在了一起。',
+          tags: ['皮尔特沃夫', '飞艇码头', '水晶之心']
+        },
+        {
+          id: 'forge', label: '熔铸之力',
+          still: 'assets/forge.webp',
+          clip: 'assets/vid/forge.mp4',
+          accent: '#C8AA6E',
+          eyebrow: '符文锻炉',
+          title: '每一件神器,都始于一次锤击',
+          body: '海克斯水晶在炉火里苏醒,锤声就是它的心跳。',
+          tags: ['墨水蓝图', '金工齿轮']
+        },
+        {
+          id: 'zaun', label: '祖安屋顶',
+          still: 'assets/zaun.webp',
+          clip: 'assets/vid/zaun.mp4',
+          accent: '#6BC46D',
+          eyebrow: '底城巷道',
+          title: '麻烦制造者,已就位',
+          body: '绿色蒸汽漫过屋檐,鲨鱼火箭正对着天空磨牙。',
+          tags: ['化学蒸汽', '鲨炮少女']
+        },
+        {
+          id: 'rift', label: '峡谷混战',
+          still: 'assets/rift.webp',
+          clip: 'assets/vid/rift.mp4',
+          accent: '#D13639',
+          scroll: 1.7, linger: 0.5,
+          eyebrow: '嚎哭深渊',
+          title: '大招齐放,定格这一秒',
+          body: '五人团战的瞬间被水晶冻住——每一帧都是招牌动作。',
+          tags: ['极地大乱斗', '团战时刻', '水晶冻结']
+        },
+        {
+          id: 'signature', label: '招牌一击',
+          still: 'assets/signature.webp',
+          clip: 'assets/vid/signature.mp4',
+          accent: '#F0E6D2',
+          scroll: 1.8, linger: 0.5,
+          eyebrow: '究极技能',
+          title: '超究极死神鲨弹,发射!',
+          body: '属于你的招牌动作,也该登场了。',
+          tags: ['一锤定音', '传说登场'],
+          cta: true
+        }
+      ],
+      connectors: [
+        'assets/vid/conn1.mp4',
+        'assets/vid/conn2.mp4',
+        'assets/vid/conn3.mp4',
+        'assets/vid/conn4.mp4'
+      ]
+    });
+  </script>
+</body>
+</html>

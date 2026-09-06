@@ -1,0 +1,10 @@
+# scratch pipeline dir (prompts, stills, frames, task json) — regenerate via the pipeline
+work/
+
+# background music is user-supplied (copyright) — drop your own loop here
+assets/bgm.mp3
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log

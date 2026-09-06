@@ -10,7 +10,9 @@ English | [简体中文](README.md)
 > heart, then flies on to the next scene without a single cut — the whole page is one
 > continuous camera take you scrub back and forth with your mouse wheel.
 
-![demo](docs/demo.mp4)
+![demo](docs/demo-preview.webp)
+
+**[▶ Watch the full demo video](docs/demo.mp4)** (24 s, all five scenes)
 
 ![screenshot](docs/screenshot.png)
 

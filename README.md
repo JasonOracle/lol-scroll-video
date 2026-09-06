@@ -9,7 +9,9 @@
 > 滚动鼠标,镜头从场景外一路俯冲进海克斯微缩世界,再无缝飞往下一个场景——
 > 整个页面就是一段可以用滚轮来回"擦洗"的连续运镜。
 
-![演示录屏](docs/demo.mp4)
+![演示录屏](docs/demo-preview.webp)
+
+**[▶ 观看完整演示视频](docs/demo.mp4)**(24 秒,含全部五个场景)
 
 ![screenshot](docs/screenshot.png)
 

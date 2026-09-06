@@ -10,6 +10,10 @@ English | [简体中文](README.md)
 > heart, then flies on to the next scene without a single cut — the whole page is one
 > continuous camera take you scrub back and forth with your mouse wheel.
 
+![demo](docs/demo.mp4)
+
+![screenshot](docs/screenshot.png)
+
 *(English summary — the full write-up lives in the [Chinese README](README.md).)*
 
 ![screenshot](docs/screenshot.png)
